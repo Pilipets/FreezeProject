@@ -1,20 +1,20 @@
 #include "pch.h"
 
-#include "MyClass.h"
+#include "AsioClass.h"
 
-MyClass::MyClass() :
+AsioClass::AsioClass() :
 	work_guard(boost::asio::make_work_guard(ioc)),
 	worker_thread([this] { ioc.run(); }) {
 }
 
-MyClass::~MyClass()
+AsioClass::~AsioClass()
 {
 	work_guard.reset();
 	worker_thread.join();
 }
 
-MyClass& MyClass::getInstance()
+AsioClass& AsioClass::getInstance()
 {
-	static MyClass ins;
+	static AsioClass ins;
 	return ins;
 }

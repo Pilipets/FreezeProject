@@ -127,7 +127,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;BOOST_ALL_DYN_LINK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;BOOST_ASIO_DYN_LINK;BOOST_ASIO_SEPARATE_COMPILATION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>..\AsioFreeze;C:\Mine\Additional\vcpkg\installed\x64-windows-v140\include;..\ThreadFreeze;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -135,7 +135,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Mine\Additional\vcpkg\installed\x64-windows-v140\lib;C:\Mine\Tasks\2. TelegramNotify\FreezingSolution\x64\Debug</AdditionalLibraryDirectories>
-      <AdditionalDependencies>ThreadFreeze.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>AsioFreeze.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

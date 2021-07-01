@@ -10,10 +10,10 @@
 #include <thread>
 #include <boost/asio/io_context.hpp>
 
-struct ASIOFREEZE_API MyClass {
-	MyClass();
-	~MyClass();
-	static MyClass& getInstance();
+struct ASIOFREEZE_API AsioClass {
+	AsioClass();
+	~AsioClass();
+	static AsioClass& getInstance();
 
 	boost::asio::io_context ioc;
 	boost::asio::executor_work_guard<boost::asio::io_context::executor_type> work_guard;
